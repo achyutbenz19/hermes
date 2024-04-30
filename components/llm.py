@@ -7,7 +7,7 @@ load_dotenv()
 
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 
-def batch():
+def stream():
     chat = ChatGroq(model_name="mixtral-8x7b-32768")
     prompt = ChatPromptTemplate.from_messages([("human", "Write a 200 word essay about {topic}")])
     chain = prompt | chat
@@ -16,4 +16,4 @@ def batch():
     for chunk in chain.stream({"topic": "The Moon"}):
         print(chunk.content, end="", flush=True)
         
-batch()
+stream()
