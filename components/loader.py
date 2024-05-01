@@ -16,17 +16,17 @@ class DocumentLoader:
             text_content=False
         )
         docs = loader.load()
-        splitted_docs = self.text_split(docs, chunk_size, chunk_overlap)
-        return splitted_text
+        splitted_docs = self.text_split(docs=docs, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+        return splitted_docs
     
     def markdown(self, path, chunk_size=1000, chunk_overlap=0):
         loader = UnstructuredMarkdownLoader(markdown_path)
         docs = loader.load
-        splitted_docs = self.text_split(docs, chunk_size, chunk_overlap)
-        return splitted_text
+        splitted_docs = self.text_split(docs=docs, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+        return splitted_docs
     
     @staticmethod
-    def text_split(self, docs, chunk_size, chunk_overlap):
+    def text_split(docs, chunk_size, chunk_overlap):
         text_splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         texts = text_splitter.split_documents(documents=docs)
         return texts
