@@ -1,0 +1,16 @@
+Soups, Salads, and Accompanies:
+1. Dahi
+   - ID: 7cee4590-1253-42e7-ae3c-0d0801ba73f2
+   - Description: Plain low-fat homemade yogurt.
+
+2. Tomato Soup
+   - ID: 138937aa-3ef4-4b16-8d7a-e86f602c0d39
+   - Description: Fresh tomato soup made using our own recipe.
+
+3. Vegetable Lentil Soup
+   - ID: b96efa10-3abe-4db3-b525-bf3e3f548cc6
+   - Description: A delicately simmered lentil soup made with seasonal vegetables.
+
+4. Samosa Chat
+   - ID: 2387202a-0955-4d48-8a91-a0c6e3655c04
+   - Description: Crispy samosas topped with Tangy and Spicy yogurt and chutney.

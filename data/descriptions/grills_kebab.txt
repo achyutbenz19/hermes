@@ -1,0 +1,24 @@
+Grills and Kebabs:
+1. Chicken Sheesh Kabab
+   - ID: 65784c3a-a8a4-4b19-8804-459d6042136d
+   - Description: Minced chicken blended in chef's combination of herbs and spices, roasted in a clay oven.
+
+2. Chicken Tikka
+   - ID: 7b299b1d-7ca5-439c-b8ce-02c5ec447db3
+   - Description: Chicken breast simmered in onion and tomato sauce with a blend of aromatic herbs, spices and grilled in Tandoor.
+
+3. Fish Tikka
+   - ID: c1ff4c9a-8e19-4854-bd79-331b31d3e6e6
+   - Description: Fish fillet marinated in ginger, garlic and tandoori mix, roasted in a clay oven.
+
+4. Himalayan Mix Grill
+   - ID: 53db64c4-533c-4e85-817f-04f61648952d
+   - Description: Tandoori chicken, chicken tikka, chicken sheesh kabab, lamb sheesh kabab, fish tikka and shrimp, served in a sizzling platter.
+
+5. Lamb Sheesh Kebab
+   - ID: 3e5792dc-475d-4aea-a8b8-0fe6182592a9
+   - Description: Minced lamb blended in chef’s combination of herbs and spices, roasted in a clay oven.
+
+6. Sheesh Kebab
+   - ID: 001b2251-5a93-4d0c-a758-6d7e1c139cd6
+   - Description: Minced lamb blended in chef's combination of herbs and spices, roasted in clay oven.

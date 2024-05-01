@@ -1,0 +1,16 @@
+Vegetarian Appetizers:
+1. Masala Papad
+   - ID: b78ca3ff-9ae9-4362-9d0f-f1f6db4416d5
+   - Description: Papad smothered with diced onion, chili, tomato and cilantro, tossed in lemon and lime juice.
+
+2. Bhel Puri
+   - ID: 0e629a52-0564-4d91-96dc-8f3b65175117
+   - Description: Crunchy snack made of rice crisps, potato, onion and chutney.
+
+3. Vegetable Pakora
+   - ID: 65e8ad67-fcaa-44eb-8544-175d38a34487
+   - Description: Savory vegetable fritters, mildly spiced, dipped in batter and deep fried.
+
+4. Vegetable Samosa
+   - ID: a53508dd-9a6e-4f51-8fa6-0d5c369c42f7
+   - Description: Crispy pastry stuffed with potatoes, green peas and deep fried.

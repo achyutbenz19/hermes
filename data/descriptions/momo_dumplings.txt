@@ -1,0 +1,20 @@
+Momos:
+1. Chilli Momo
+   - ID: 0de6fc22-0637-47e9-988d-3a23f0f166dc
+   - Description: Dumpling (Chicken, Paneer, Vegetable) Momo sauteed with onion, bell pepper, hot & sweet chilli sauce.
+
+2. Fried Momo
+   - ID: 974bf94f-ebcc-405a-ad6c-65c3af99a1a6
+   - Description: Minced vegetables/chicken marinated in Himalayan spices, stuffed in flour wrap and deep fried. Served with special Himalayan sauces.
+
+3. Soup Momo
+   - ID: 672ab360-9512-40dc-8d6c-e956faa9ad17
+   - Description: Momo (Chicken, Vegetable, Paneer) served with Chef's special Himalayan soup. Jhol Momo.
+
+4. Steamed Momo
+   - ID: 110f8c2f-6b28-4a3d-ab5e-a7d32430bbf4
+   - Description: Minced vegetables/chicken marinated in Himalayan spices, stuffed in flour wrap and steamed to perfection.
+
+5. Chicken Momo
+   - ID: 311de698-4493-444c-914c-f0e7bf029ed2
+   - Description: The momo embodies many cultures into a single entity.

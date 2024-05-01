@@ -1,0 +1,8 @@
+Desserts:
+1. Gulab Jamun (Served Warm)
+   - ID: 45219d96-37c8-4cf2-a04a-403d7b1c0c58
+   - Description: Golden fried balls made from powdered milk, soaked in a sweet saffron syrup.
+
+2. Rice Pudding (Served Chilled)
+   - ID: f15f7113-b92a-43fa-bae3-e461eaa0ca82
+   - Description: Fragrant rice with milk, raisins, and almonds.

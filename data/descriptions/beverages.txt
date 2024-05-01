@@ -1,0 +1,16 @@
+Beverages:
+1. Juice
+   - ID: 8013464b-323c-474b-90f0-64c40b150138
+   - Description: Juice, with flavors like apple, mango, orange, pineapple, etc.
+
+2. Mango Lassi
+   - ID: aae33bb2-05ad-44ff-9bc7-ec0201032087
+   - Description: Rich creamy yogurt with mango puree, served chilled, sweet.
+
+3. Pineapple Lassi
+   - ID: e58536aa-d957-4b60-baae-db8ccdc5df79
+   - Description: Rich creamy yogurt with pineapple juice served chilled, sweet.
+
+4. Thums Up Limca
+   - ID: ec075f24-d438-4eaf-9c9a-6e1173e0a852
+   - Description: Popular Indian Soft Drink – Thums Up or Limca.

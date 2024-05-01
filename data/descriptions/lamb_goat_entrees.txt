@@ -1,0 +1,24 @@
+Lamb and Goat Entrees:
+1. Lamb Tikka Masala
+   - ID: 96462c0d-ab52-40e3-8947-03156600c2f7
+   - Description: Marinated lamb tenderloins barbecued in clay oven, cooked in chef’s special creamy sauce.
+
+2. Lamb Chili Masala
+   - ID: 590914b7-3cca-4975-b05d-969620792384
+   - Description: Lamb cooked with green chilies and hot spices in tomato sauce.
+
+3. Goat Curry
+   - ID: f28e9a53-7f46-44a5-8dc2-e9ea13bab18a
+   - Description: Goat with bone cooked in traditional spices and flavored onion tomato sauce.
+
+4. Keema Mutter
+   - ID: 063ac33f-4099-4765-8ef6-d1ece27d7af6
+   - Description: Minced lamb and peas cooked with onion, garlic, ginger, herbs and spices.
+
+5. Lamb Biryani
+   - ID: e2cf516e-7a97-4ad0-aca9-c27795784a63
+   - Description: Basmati rice flavored and cooked in chef’s special biryani masala.
+
+6. Lamb Pasanda
+   - ID: f6c4aa4b-489b-411c-bdd4-762273aceb94
+   - Description: Tender pieces of lamb cooked with almond in a rich creamy almond sauce.

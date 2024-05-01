@@ -1,0 +1,32 @@
+Vegetarian Entrees:
+1. Chana Masala
+   - ID: 3010157b-577f-4ad8-90b9-6defce2f65f8
+   - Description: Delicious chickpeas cooked in an exotic blend of Indian spices.
+
+2. Dal Makhani
+   - ID: 11c8cc25-ac1c-4a17-97ad-ff7ceb9ea190
+   - Description: Whole black lentil simmered until tender, seasoned with ginger, garlic, and herbs.
+
+3. Farsi Bhaji
+   - ID: 9d30e01c-8a1b-4b8b-bd9d-4b0adee0786c
+   - Description: Green beans cooked with freshly grated coconut in coconut sauce and spices.
+
+4. Malai Kofta
+   - ID: 6e9ddfb5-4dce-40a9-8dbe-024e971c9758
+   - Description: A blend of paneer and mixed vegetables cooked in tasty cream-based tomato sauce.
+
+5. Navratan Korma
+   - ID: 055b9742-3bab-43fa-8773-83ec6122d2cd
+   - Description: Mixed vegetables cooked in a gravy of cashew paste and tomato with mild spices.
+
+6. Tadka Daal
+   - ID: 0678411d-5f57-45c8-b9aa-001b327cefeb
+   - Description: Local-style boiled lentils sautéed with cumin seed, Himalayan herbs, and spices.
+
+7. Baigan Bharata
+   - ID: dc041ed4-8a2b-4146-9f05-5be80e37685b
+   - Description: Fresh eggplant roasted in a clay oven, mashed, and blended in a rich mixture of herbs and spices.
+
+8. Dal Palak (Dhan Saag)
+   - ID: 52d8ca41-2222-47a5-a50c-81dc004005c4
+   - Description: Local-style boiled lentils sautéed with cumin seed, touch of onion tomato sauce, and spices.

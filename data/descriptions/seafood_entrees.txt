@@ -1,0 +1,28 @@
+Seafood Entrees:
+1. Fish Tikka Masala
+   - ID: ad872742-50dc-4c29-b655-b517d49ca912
+   - Description: Fish fillet marinated and roasted in a clay oven and cooked in a creamy seafood masala.
+
+2. Shrimp Curry
+   - ID: 83fb124d-a142-4ca1-ba15-a27dde3a0c97
+   - Description: Shrimp cooked in curry sauce.
+
+3. Shrimp Tikka Masala
+   - ID: 00e7f567-3460-4a3f-8300-966b6a5586da
+   - Description: Shrimp roasted in a clay oven and cooked in creamy seafood masala.
+
+4. Shrimp Vindaloo
+   - ID: ada177e4-59f0-41f6-a1f5-042c5208296a
+   - Description: Shrimp and Potatoes cooked in a tangy spicy tomato & onion curry sauce.
+
+5. Tandoori Prawn Masala
+   - ID: 9afbe224-9fc2-4305-b82f-f17e8405a49c
+   - Description: Jumbo prawn roasted in clay oven and cooked in special seasoned sauce.
+
+6. Tandoori Prawn
+   - ID: 8576463f-2dfb-4f79-a4c8-d03257f038cb
+   - Description: Jumbo prawn roasted in clay oven and cooked in special seasoned sauce.
+
+7. Fish Curry
+   - ID: bebf16a0-e765-456d-972b-5a3023d9ba9c
+   - Description: Mahi mahi fish cooked in curry sauce.

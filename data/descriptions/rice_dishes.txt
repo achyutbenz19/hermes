@@ -1,0 +1,40 @@
+Rice Dishes:
+1. Chicken Biryani
+   - ID: 19fd83e2-091d-4e0f-90a1-3c63a2c191f0
+   - Description: Basmati rice flavored and cooked with Chicken in chef's special biryani Masala.
+
+2. Himalayan Special Biryani
+   - ID: d8ca9cfe-f9b0-41c9-9bca-4bc932a477ac
+   - Description: Chicken, lamb, and shrimp. Basmati rice flavored and cooked in chef's special biryani masala.
+
+3. Jeera Rice
+   - ID: c80df3f5-faab-4e16-8d73-65d2309114b9
+   - Description: Long grained basmati rice cooked with jeera (cumin seeds).
+
+4. Lamb Biryani
+   - ID: ac1b9c5f-1ebd-4371-916b-d011cda85879
+   - Description: Basmati rice flavored and cooked in chef's special biryani masala.
+
+5. Lemon Rice
+   - ID: 2815b124-d287-447e-a94c-80094e38b023
+   - Description: Fine quality long grained basmati rice cooked with lemon juice, mustard seed, and touch of spices.
+
+6. Peas Pulav
+   - ID: b9cf608d-6e4e-4a9d-a692-c4e27d4f4cc9
+   - Description: Basmati rice cooked with green peas and flavored.
+
+7. Shrimp Biryani
+   - ID: ed1ecdc4-7693-4e89-a5e3-6155b940782c
+   - Description: Basmati rice flavored and cooked in chef's special biryani masala.
+
+8. Steamed Basmati Rice
+   - ID: d70f5ddf-a615-473b-bcea-5773deb120a0
+   - Description: Fine quality long grained basmati rice especially imported from India.
+
+9. Vegetable Biryani
+   - ID: 3fba3cf0-8020-4420-aabc-b95d786fbef5
+   - Description: Basmati rice flavored and cooked in chef's special biryani masala.
+
+10. Vegetable Pulav
+    - ID: dbdf95dd-02cd-492d-946c-77519abc01cb
+    - Description: Basmati rice and vegetables cooked with peas, carrots, raisin, and cashew.

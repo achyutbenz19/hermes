@@ -1,0 +1,24 @@
+Himalayan Appetizers:
+1. Chicken Chowela
+   - ID: d615aeb1-fecd-4d87-8ce4-34d3401cb645
+   - Description: Boneless chicken marinated in herbs, grilled in tandoori and flash-cooked with flavorful Himalayan spices.
+
+2. Chicken Sadheko
+   - ID: 8fc48c48-c246-434b-baf2-86c9870977d1
+   - Description: Grilled chicken shredded and mixed with savory Himalayan spices.
+
+3. Chilli Chicken
+   - ID: ca52dfc1-0ac3-4748-b127-84da3f7bee76
+   - Description: Chicken sauteed with onion, bell pepper, red chilli, and Sichuan pepper.
+
+4. Chilli Paneer
+   - ID: 4bf3e36c-c291-49a0-9977-edf70ca8f253
+   - Description: Paneer sauteed with onion, bell pepper, red chilli, and Sichuan pepper.
+
+5. Chilli Shrimp
+   - ID: 11e9e774-5caf-4a5e-beb0-08c477ffb44c
+   - Description: Shrimp sauteed with onion, bell pepper, red chilli, and Sichuan pepper.
+
+6. Potato Chilli
+   - ID: ec303e07-c5b1-4e29-ba5a-209cad4e75ee
+   - Description: Sauteed with onion, potato, red chilli, sweet & hot sauce.

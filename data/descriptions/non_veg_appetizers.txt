@@ -1,0 +1,12 @@
+Non-Vegetarian Appetizers:
+1. Chicken 65
+   - ID: 2feb15e7-097d-4f55-a083-d2af45b0d038
+   - Description: Deep fried chicken marinated in a tangy mix, sauteed with onion, bell pepper and curry leaves.
+
+2. Fried Chicken Wings
+   - ID: d56ec445-c14e-4dea-a628-510dbda490ea
+   - Description: Fried spiced chicken wings.
+
+3. Masala Chicken Wings
+   - ID: 92101418-b3e9-41c8-b693-1fbb20a67419
+   - Description: Char broiled chicken wings marinated in spices and roasted in a tandoori oven.

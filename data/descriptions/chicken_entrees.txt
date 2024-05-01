@@ -1,0 +1,24 @@
+Chicken Entrees:
+1. Chicken Chilli Masala
+   - ID: 75bad9ff-f36f-4c91-8f5e-91a3ce718ce2
+   - Description: Chicken cooked with green chillies, bell peppers, onion, hot chilli, soy sauce and spices in tomato onion sauce.
+
+2. Chicken Curry
+   - ID: fdde7d8b-2d5f-4d63-b486-23a5d48d3f7a
+   - Description: Chicken simmered in onion and tomato sauce with a blend of aromatic herbs and spices.
+
+3. Chicken Makhani
+   - ID: e2d25d31-5b84-482f-b2bc-fc764242bc27
+   - Description: Clay-oven roasted chicken cooked in creamy tomato sauce. Also known as Butter Chicken.
+
+4. Chicken Saag
+   - ID: 115bda16-c977-4d35-8f95-4199b3895bb3
+   - Description: Tender pieces of chicken and spinach cooked in creamy onion tomato sauce.
+
+5. Chicken Vindaloo
+   - ID: a48cba7b-9b3f-438f-9cf1-155d747f131d
+   - Description: Chicken cooked in Goan style onion tomato based tangy-hot curry sauce.
+
+6. Chicken Tikka Masala
+   - ID: a9927e25-e23b-42b3-a0af-19ac6efac609
+   - Description: Expert Marinated chicken breast cooked in creamy onion tomato sauce.

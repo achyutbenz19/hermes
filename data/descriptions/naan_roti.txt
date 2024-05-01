@@ -1,0 +1,32 @@
+Naans and Roti:
+1. Bread Basket
+   - ID: dba7705c-c16d-4a0a-99cb-a6fb6e8da874
+   - Description: A delightful combination of Naan, Onion Naan, and Garlic Naan served in a basket.
+
+2. Chilli Naan
+   - ID: eaa22a9f-9aa2-4f60-82e4-132f29d2f697
+   - Description: Spicy Naan with a flavorful kick of green chillies, perfect for spice enthusiasts.
+
+3. Roti
+   - ID: 79aca4cb-926c-4619-8e79-3f9b3ea1ed9f
+   - Description: Whole wheat bread baked in our clay oven, offering a wholesome and nutritious option.
+
+4. Paneer Naan
+   - ID: ae00660a-7812-4d3d-a6f1-e3fc8e54d492
+   - Description: Naan stuffed with delicious paneer, providing a delightful blend of flavors.
+
+5. Onion Naan
+   - ID: f1f567f1-879d-4b73-8a60-24a5d57beb70
+   - Description: Naan infused with the rich taste of onions, enhancing its savory appeal.
+
+6. Naan
+   - ID: a6107ec4-ea0c-4d7b-91d1-f17a22b28984
+   - Description: Traditional Naan Bread without egg, soft and fluffy, a perfect accompaniment to your meal.
+
+7. Garlic Naan
+   - ID: 22f958a3-249a-4af7-8b87-1765476b767d
+   - Description: Naan enriched with the aromatic goodness of garlic, adding a distinctive flavor.
+
+8. Bhatoora
+   - ID: 9b2bda87-3f0e-4c63-904c-0fe4c7be9cfe
+   - Description: Leavened and fermented bread fried in oil, creating a crispy and indulgent texture.

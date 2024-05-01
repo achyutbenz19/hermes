@@ -1,0 +1,24 @@
+Paneer Entrees:
+1. Mutter Paneer
+   - ID: 4ea1bdf4-a099-4cd1-84c1-eba36811731c
+   - Description: Green peas and paneer (cottage cheese) cooked in creamy cashew-based tomato and onion sauce.
+
+2. Palak Paneer
+   - ID: c0ae7f2d-3d12-4c66-92c8-751289485a17
+   - Description: Spinach cooked with paneer (cottage cheese) delicately spiced and cooked in a creamy onion tomato sauce.
+
+3. Paneer Bhurji
+   - ID: c851cc1f-0b86-4fab-8837-711947fa684e
+   - Description: Grated paneer cooked in tomato and onion sauce, cream, cashew nut, and spices.
+
+4. Paneer Chilli Masala
+   - ID: bc9d0093-6a7a-41bd-897d-23025ef73eb0
+   - Description: Stir-fried paneer sauteed with green chillies, onion, bell peppers, hot chilli sauce, soy sauce, and cooked in spices.
+
+5. Paneer Tikka Masala
+   - ID: b61583ab-03ff-4ef8-952e-11da2bbcf2f9
+   - Description: Paneer cubes cooked with bell peppers, cashew creamy onion tomato curry sauce.
+
+6. Paneer Makhani
+   - ID: 97adcd6a-bda3-417f-a718-4792b292f133
+   - Description: Cubes of paneer (cottage cheese) cooked in cashew-based creamy tomato sauce.
