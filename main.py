@@ -26,15 +26,9 @@ prompt = set_custom_prompt()
 
 query="what is the price of butter naan"
 
-db = Vectorstore("test")
-loader = DocumentLoader()
-
-texts = loader.json("data/home.json",1000,0)
-data = db.add(docs=texts)
-
 chat_model = LanguageModelProcessor()
 llm = chat_model.get_llm()
-retriever = db.get_reteriever()
+retriever = Vectorstore().get_reteriever()
 qa = RetrievalQA.from_chain_type(llm=llm,
                                chain_type="stuff",
                                retriever=retriever,
