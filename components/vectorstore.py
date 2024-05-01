@@ -15,3 +15,7 @@ class Vectorstore:
     def query(self, query: str):
         results = self.db.similarity_search(query=query)
         return results
+    
+    def get_reteriever(self):
+        retriever=self.db.as_retriever(search_kwargs={'k': 3})
+        return retriever
