@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
@@ -22,13 +22,14 @@ class LanguageModelProcessor:
     
     def chat(self, query):
         self.prompt = ChatPromptTemplate.from_messages([("system", SYSTEM_PROMPT), ("human", query)])
-        chain = self.prompt | self.llm
-        with_message_history = RunnableWithMessageHistory(
-            chain,
+        runnable = self.prompt | self.llm
+        context_runnable = RunnableWithMessageHistory(
+            runnable,
             self.get_session_history,
             input_messages_key="query",
         )
-        for chunk in with_message_history.stream({"query": query}, config={"configurable": {"session_id": "abc123"}}):
+        
+        for chunk in context_runnable.stream({"query": query}, config={"configurable": {"session_id": "abc123"}}):
             print(chunk.content, end="", flush=True)
     
 if __name__ == "__main__":
