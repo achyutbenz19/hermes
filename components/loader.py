@@ -2,7 +2,6 @@ from typing import List
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_core.documents.base import Document
 
-
 class DocumentLoader:
     def __init__(
         self,

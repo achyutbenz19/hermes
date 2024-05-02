@@ -4,11 +4,8 @@ from langchain_core.documents.base import Document
 import re
 
 def format_items(input_string):
-    # Regular expression to match item name and description
     pattern = r"\d+\.\s([^:]+)\s+-\s+ID:\s+[\w-]+\s+-\s+Description:\s+([^\.]+)"
     matches = re.findall(pattern, input_string)
-    
-    # Formatted output
     formatted_output = []
     for item, description in matches:
         formatted_output.append(f"{item.strip()}: {description.strip()}")

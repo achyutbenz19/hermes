@@ -53,11 +53,4 @@ class Vectorstore:
     def get_reteriever(self):
         retriever = self.vectorstore.as_retriever(search_kwargs={'k': 5})
         return retriever
-
-
-if __name__ == "__main__":
-    vectorstore = Vectorstore()
-    query = "What types of naan do you have?"
-    results = vectorstore.query(query)
-    for res in results:
-        print(res.page_content)
+    
