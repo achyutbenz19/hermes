@@ -3,7 +3,6 @@ langchain-community
 langchain-groq
 langchain-pinecone
 langsmith
-deepgram-sdk
 python-dotenv
 sentence_transformers
 langchain_text_splitters
