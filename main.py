@@ -29,7 +29,8 @@ def on_transcription_response(response):
         return
 
     transcription = result.alternatives[0].transcript
-    print("Transcription: " + transcription)
+    if result.is_final:
+        print("Transcription: " + transcription)
 
 @sockets.route('/connection', websocket=True)
 def transcript(ws):
