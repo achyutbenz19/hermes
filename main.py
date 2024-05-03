@@ -6,6 +6,7 @@ from components.stt import SpeechClientBridge
 from flask import Flask, render_template
 from flask_sockets import Sockets
 from google.cloud.speech import RecognitionConfig, StreamingRecognitionConfig
+from twilio.twiml.voice_response import VoiceResponse
 
 HTTP_SERVER_PORT = 8000
 
@@ -32,11 +33,12 @@ def on_transcription_response(response):
 
 @sockets.route('/connection', websocket=True)
 def transcript(ws):
+    resp = VoiceResponse()
     print("WS connection opened")
     bridge = SpeechClientBridge(streaming_config, on_transcription_response)
     t = threading.Thread(target=bridge.start)
     t.start()
-
+    resp.say("Hello, im herbes")
     while not ws.closed:
         message = ws.receive()
         if message is None:
