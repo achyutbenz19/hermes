@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 #google_json
-google_cloud.json
+google_creds.json
