@@ -1,9 +1,11 @@
 import logging
 import base64
+import os
 import json
 import threading
 from components.stt import SpeechClientBridge
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from twilio.twiml.voice_response import VoiceResponse, Connect, Stream
 from flask_sockets import Sockets
 from google.cloud.speech import RecognitionConfig, StreamingRecognitionConfig
 
@@ -18,6 +20,14 @@ streaming_config = StreamingRecognitionConfig(config=config, interim_results=Tru
 
 app = Flask(__name__)
 sockets = Sockets(app)
+
+@app.route("/answer", methods=['GET', 'POST'])
+def answer_call():
+    resp = VoiceResponse()
+    connect = Connect()
+    connect.stream(url=f'wss://{os.getenv("SERVER")}/connection')
+    resp.append(connect)
+    return str(resp)
 
 def on_transcription_response(response):
     if not response.results:
