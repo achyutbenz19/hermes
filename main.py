@@ -55,7 +55,10 @@ def transcript(ws):
             break
 
         data = json.loads(message)
-        if data["event"] in ("connected", "start"):
+        if data["event"] == "start":
+            call_sid = data["start"]["callSid"]
+            continue
+        if data["event"] == "connected":
             print(f"Media WS: Received event '{data['event']}': {message}")
             continue
         if data["event"] == "media":
