@@ -44,3 +44,5 @@ class LanguageModelProcessor {
     return output.content;
   }
 }
+
+module.exports = { LanguageModelProcessor };
