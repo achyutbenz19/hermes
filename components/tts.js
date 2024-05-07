@@ -12,7 +12,7 @@ class TextToSpeech extends EventEmitter {
 
   async fetchModule() {
     if (!this.fetch) {
-      this.fetch = (await import('node-fetch')).default;
+      this.fetch = (await import("node-fetch")).default;
     }
     return this.fetch;
   }
