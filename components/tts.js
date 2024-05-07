@@ -1,6 +1,5 @@
 const EventEmitter = require("events");
 const { Buffer } = require("node:buffer");
-const fetch = require("node-fetch");
 
 class TextToSpeech extends EventEmitter {
   constructor(config) {
@@ -11,12 +10,20 @@ class TextToSpeech extends EventEmitter {
     this.speechBuffer = {};
   }
 
+  async fetchModule() {
+    if (!this.fetch) {
+      this.fetch = (await import('node-fetch')).default;
+    }
+    return this.fetch;
+  }
+
   async generate(gptReply, interactionCount) {
     const { partialResponseIndex, partialResponse } = gptReply;
-
     if (!partialResponse) {
       return;
     }
+
+    const fetch = await this.fetchModule();
 
     try {
       const outputFormat = "ulaw_8000";

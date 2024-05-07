@@ -5,7 +5,6 @@ const {
   MessagesPlaceholder,
 } = require("@langchain/core/prompts");
 const { RunnableWithMessageHistory } = require("@langchain/core/runnables");
-const readline = require("readline");
 const {
   ChatMessageHistory,
 } = require("@langchain/community/stores/message/in_memory");
@@ -42,26 +41,6 @@ class LanguageModelProcessor {
     const config = { configurable: { sessionId: "1" } };
 
     let output = await contextRunnable.invoke({ input: query }, config);
-    console.log("AI:", output.content);
+    return output.content;
   }
 }
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-const llm = new LanguageModelProcessor();
-
-function ask() {
-  rl.question("\nHuman: ", (query) => {
-    if (query === "q") {
-      rl.close();
-      return;
-    }
-    llm.chat(query).then(ask);
-  });
-}
-
-console.log("waiting...");
-ask();

@@ -5,7 +5,10 @@
     "@langchain/pinecone": "^0.0.4",
     "@pinecone-database/pinecone": "^2.2.0",
     "colors": "^1.4.0",
+    "type": "module",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-ws": "^5.0.2",
     "langchain": "^0.1.36",
     "node-fetch": "^3.3.2",
     "uuid": "^9.0.1"
