@@ -7,6 +7,7 @@
     "colors": "^1.4.0",
     "dotenv": "^16.4.5",
     "langchain": "^0.1.36",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.1"
   }
 }
