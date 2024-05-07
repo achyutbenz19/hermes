@@ -17,12 +17,13 @@ app.post('/answer', (req, res) => {
     res.status(200);
     res.type('text/xml');
     res.end(`
-  <Response>
-    <Connect>
-      <Stream url="wss://${process.env.SERVER}/connection" />
-    </Connect>
-  </Response>
-  `);
+    <Response>
+      <Say>Himalayan resturant at Niles, how can I help you?</Say>
+      <Connect>
+        <Stream url="wss://${process.env.SERVER}/connection" />
+      </Connect>
+    </Response>
+    `);
 });
 
 app.ws('/connection', (ws) => {
@@ -44,9 +45,7 @@ app.ws('/connection', (ws) => {
             streamSid = msg.start.streamSid;
             callSid = msg.start.callSid;
             socket.setStreamSid(streamSid);
-            // model.setCallSid(callSid);
             console.log(`Twilio -> Starting Media Stream for ${streamSid}`.underline.red);
-            tts.generate({ partialResponseIndex: null, partialResponse: 'Hello! I understand you\'re looking for a pair of AirPods, is that correct?' }, 1);
         } else if (msg.event === 'media') {
             stt.send(msg.media.payload);
         } else if (msg.event === 'mark') {
@@ -73,18 +72,17 @@ app.ws('/connection', (ws) => {
     stt.on('transcription', async (text) => {
         if (!text) { return; }
         console.log(`Interaction ${interactionCount} – STT -> GPT: ${text}`.yellow);
-        // model.completion(text, interactionCount);
+        const modelResponse = await model.chat(text);
+        const modelReply = {
+            partialResponseIndex: null,
+            partialResponse: modelResponse
+        }
         interactionCount += 1;
+        tts.generate(modelReply, interactionCount)
     });
-
-    // model.on('gptreply', async (gptReply, icount) => {
-    //     console.log(`Interaction ${icount}: GPT -> TTS: ${gptReply.partialResponse}`.green);
-    //     tts.generate(gptReply, icount);
-    // });
 
     tts.on('speech', (responseIndex, audio, label, icount) => {
         console.log(`Interaction ${icount}: TTS -> TWILIO: ${label}`.blue);
-
         socket.buffer(responseIndex, audio);
     });
 
