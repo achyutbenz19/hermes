@@ -13,7 +13,7 @@ ExpressWs(app);
 
 const PORT = process.env.PORT || 8000;
 
-app.post('/incoming', (req, res) => {
+app.post('/answer', (req, res) => {
     res.status(200);
     res.type('text/xml');
     res.end(`
