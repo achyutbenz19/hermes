@@ -12,7 +12,11 @@ const { VectorStore } = require("./components/vectorstore");
 const app = express();
 ExpressWs(app);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
+
+app.get("/", (res) => {
+  res.json({ "message": "hermes, live!" });
+});
 
 app.post("/answer", (req, res) => {
   res.status(200);
