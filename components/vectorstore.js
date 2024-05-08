@@ -36,4 +36,4 @@ class VectorStore {
 
 // main()
 
-module.exports = VectorStore;
+module.exports = { VectorStore };
