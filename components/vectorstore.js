@@ -1,49 +1,21 @@
-const { PineconeStore } = require('@langchain/pinecone');
-const { OpenAIEmbeddings } = require('@langchain/openai');
-const { Pinecone } = require('@pinecone-database/pinecone');
-require('dotenv').config();
+require("dotenv").config();
+const Pinecone = require("@pinecone-database/pinecone").Pinecone;
+const OpenAIEmbeddings = require("@langchain/openai").OpenAIEmbeddings;
+const PineconeStore = require("@langchain/pinecone").PineconeStore;
 
-class Vectorstore {
-    constructor(indexName = 'hermes') {
-        this.indexName = indexName;
-        this.client = new Pinecone();
-        this.embeddings = new OpenAIEmbeddings();
-        this.vectorstore = null;
-        this.initialize();
-    }
+const pinecone = new Pinecone();
+const pineconeIndex = pinecone.Index("hermes");
 
-    async initialize() {
-        try {
-            const index = await this.client.Index(this.indexName);
-            const pineconeConfig = {
-                indexName: this.indexName,
-                environment: process.env.PINECONE_ENVIRONMENT
-            };
-            this.vectorstore = await PineconeStore.fromExistingIndex(
-                this.embeddings,
-                {
-                    index,
-                    pineconeConfig
-                }
-            );
-        } catch (error) {
-            console.error("Initialization error:", error);
-        }
-    }
+async function query(query) {
+  const vectorStore = await PineconeStore.fromExistingIndex(
+    new OpenAIEmbeddings(),
+    { pineconeIndex },
+  );
 
-    async query(query) {
-        const results = await this.vectorstore.similaritySearch(query)
-        return results
-    }
-
-    getRetriever() {
-        return this.vectorstore.asRetriever({ searchKwargs: { k: 5 } });
-    }
+  const results = await vectorStore.similaritySearch(query);
+  return results;
 }
 
-const model = new Vectorstore();
-model.initialize().then(() => {
-    model.query("what is chicken tikka masala?")
-}).catch(console.error);
+query("what is the mot popular vegertarian entrees?");
 
-module.exports = Vectorstore;
+module.exports = query;
