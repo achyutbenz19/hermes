@@ -3,19 +3,37 @@ const Pinecone = require("@pinecone-database/pinecone").Pinecone;
 const OpenAIEmbeddings = require("@langchain/openai").OpenAIEmbeddings;
 const PineconeStore = require("@langchain/pinecone").PineconeStore;
 
-const pinecone = new Pinecone();
-const pineconeIndex = pinecone.Index("hermes");
+class VectorStore {
+  constructor() {
+    this.pinecone = new Pinecone();
+    this.pineconeIndex = this.pinecone.Index("hermes");
+    this.initVectorStore();
+  }
 
-async function query(query) {
-  const vectorStore = await PineconeStore.fromExistingIndex(
-    new OpenAIEmbeddings(),
-    { pineconeIndex },
-  );
+  async initVectorStore() {
+    this.vectorStore = await PineconeStore.fromExistingIndex(
+      new OpenAIEmbeddings(),
+      { pineconeIndex: this.pineconeIndex }
+    );
+  }
 
-  const results = await vectorStore.similaritySearch(query);
-  return results;
+  async queryVectorStore(query) {
+    const results = await this.vectorStore.similaritySearch(query);
+    return results;
+  }
+
+  async getRetriever() {
+    return this.vectorStore.asRetriever({ searchKwargs: { k: 5 } });
+  }
 }
 
-query("what is the mot popular vegertarian entrees?");
+// async function main() {
+//   const j = new VectorStore();
+//   await j.initVectorStore();
+//   console.log(await j.queryVectorStore("What is chicken?"));
+//   console.log(await j.getRetriever());
+// }
 
-module.exports = query;
+// main()
+
+module.exports = VectorStore;
