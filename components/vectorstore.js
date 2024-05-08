@@ -27,13 +27,4 @@ class VectorStore {
   }
 }
 
-// async function main() {
-//   const j = new VectorStore();
-//   await j.initVectorStore();
-//   console.log(await j.queryVectorStore("What is chicken?"));
-//   console.log(await j.getRetriever());
-// }
-
-// main()
-
 module.exports = { VectorStore };

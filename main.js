@@ -7,6 +7,7 @@ const { LanguageModelProcessor } = require("./components/model");
 const { Socket } = require("./components/socket");
 const { SpeechToText } = require("./components/stt");
 const { TextToSpeech } = require("./components/tts");
+const { VectorStore } = require("./components/vectorstore");
 
 const app = express();
 ExpressWs(app);
@@ -35,6 +36,7 @@ app.ws("/connection", (ws) => {
   const socket = new Socket(ws);
   const stt = new SpeechToText();
   const tts = new TextToSpeech({});
+  const vectorstore = new VectorStore()
 
   let marks = [];
   let interactionCount = 0;
@@ -78,7 +80,9 @@ app.ws("/connection", (ws) => {
       return;
     }
     console.log(`Interaction ${interactionCount} – STT -> GPT: ${text}`.yellow);
-    const modelResponse = await model.chat(text);
+    const relevantDocs = await vectorstore.queryVectorStore(text);
+    console.log(relevantDocs);
+    const modelResponse = await model.chat(text, relevantDocs);
     const modelReply = {
       partialResponseIndex: null,
       partialResponse: modelResponse,
@@ -97,5 +101,15 @@ app.ws("/connection", (ws) => {
   });
 });
 
-app.listen(PORT);
-console.log(`Server running on port ${PORT}`);
+// app.listen(PORT);
+// console.log(`Server running on port ${PORT}`);
+
+// async function main() {
+//   const j = new VectorStore();
+//   const l = new LanguageModelProcessor()
+//   await j.initVectorStore();
+//   const docs = (await j.queryVectorStore("What is chicken?"));
+//   console.log(await l.chat("WHat is Chicken tikka masala?", docs))
+// }
+
+// main()
