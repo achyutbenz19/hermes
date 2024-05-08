@@ -20,7 +20,7 @@ class LanguageModelProcessor {
     this.messageHistory = new ChatMessageHistory();
   }
 
-  async chat(query) {
+  async chat(query, documents) {
     this.prompt = ChatPromptTemplate.fromMessages([
       [
         "ai",
@@ -32,6 +32,7 @@ class LanguageModelProcessor {
 
     const runnable = this.prompt.pipe(this.llm);
     const contextRunnable = new RunnableWithMessageHistory({
+      context: documents,
       runnable,
       getMessageHistory: (_sessionId) => this.messageHistory,
       inputMessagesKey: "input",

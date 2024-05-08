@@ -81,7 +81,6 @@ app.ws("/connection", (ws) => {
     }
     console.log(`Interaction ${interactionCount} – STT -> GPT: ${text}`.yellow);
     const relevantDocs = await vectorstore.queryVectorStore(text);
-    console.log(relevantDocs);
     const modelResponse = await model.chat(text, relevantDocs);
     const modelReply = {
       partialResponseIndex: null,
@@ -101,15 +100,17 @@ app.ws("/connection", (ws) => {
   });
 });
 
-// app.listen(PORT);
-// console.log(`Server running on port ${PORT}`);
+app.listen(PORT);
+console.log(`Server running on port ${PORT}`);
 
 // async function main() {
 //   const j = new VectorStore();
 //   const l = new LanguageModelProcessor()
 //   await j.initVectorStore();
-//   const docs = (await j.queryVectorStore("What is chicken?"));
-//   console.log(await l.chat("WHat is Chicken tikka masala?", docs))
+//   const query = "What is chicken 65?"
+//   const docs = (await j.queryVectorStore(query));
+//   console.log(docs)
+//   console.log(await l.chat(query, docs))
 // }
 
 // main()
