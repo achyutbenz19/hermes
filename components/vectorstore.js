@@ -14,9 +14,10 @@ class Vectorstore {
 
     async initialize() {
         try {
+            console.log(process.env.PINECONE_API_KEY, "is API")
             const index = await this.client.Index(this.indexName);
             const pineconeConfig = {
-                apiKey: process.env.PINECONE_API_KEY,
+                indexName: this.indexName,
                 environment: process.env.PINECONE_ENVIRONMENT
             };
             this.vectorstore = await PineconeStore.fromExistingIndex(
@@ -32,9 +33,8 @@ class Vectorstore {
     }
 
     async query(query) {
-        console.log(this.vectorstore)
-        // const results = await this.vectorstore.similaritySearch(query)
-        // return results
+        const results = await this.vectorstore.similaritySearch(query)
+        return results
     }
 
     getRetriever() {
