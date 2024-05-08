@@ -14,7 +14,7 @@ class Vectorstore {
 
     async initialize() {
         try {
-            const index = await this.client.describeIndex(this.indexName);
+            const index = await this.client.Index(this.indexName);
             const pineconeConfig = {
                 apiKey: process.env.PINECONE_API_KEY,
                 environment: process.env.PINECONE_ENVIRONMENT
