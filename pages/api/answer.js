@@ -4,7 +4,7 @@ export default function ANSWER(req, res) {
             <Response>
                 <Say>Himalayan restaurant at Niles, how can I help you?</Say>
                 <Connect>
-                    <Stream url="wss://${process.env.SERVER}/connection" />
+                    <Stream url="wss://${process.env.SERVER}/api/connection" />
                 </Connect>
             </Response>
         `;
