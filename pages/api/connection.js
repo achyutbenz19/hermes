@@ -14,9 +14,6 @@ const SocketHandler = (req, res) => {
         res.socket.server.io = server;
         const io = new Socket(server);
 
-        ttsService.generate({ partialResponseIndex: null, partialResponse: 'Hello! I understand you\'re looking for a pair of AirPods, is that correct?' }, 1);
-
-
         io.on("connection", (socket) => {
             console.log("Client connected");
             let streamSid;
