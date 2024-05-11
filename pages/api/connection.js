@@ -10,9 +10,7 @@ const SocketHandler = (req, res) => {
         console.log('Socket is already running');
     } else {
         console.log('Socket is initializing');
-        const server = new Server(res.socket.server);
-        res.socket.server.io = server;
-        const io = new Socket(server);
+        const io = new Server(res.socket.server);
 
         io.on("connection", (socket) => {
             console.log("Client connected");
