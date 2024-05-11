@@ -14,6 +14,9 @@ const SocketHandler = (req, res) => {
         res.socket.server.io = server;
         const io = new Socket(server);
 
+        ttsService.generate({ partialResponseIndex: null, partialResponse: 'Hello! I understand you\'re looking for a pair of AirPods, is that correct?' }, 1);
+
+
         io.on("connection", (socket) => {
             console.log("Client connected");
             let streamSid;
@@ -24,8 +27,6 @@ const SocketHandler = (req, res) => {
             const vectorstore = new VectorStore();
             let marks = [];
             let interactionCount = 0;
-
-            ttsService.generate({ partialResponseIndex: null, partialResponse: 'Hello! I understand you\'re looking for a pair of AirPods, is that correct?' }, 1);
 
             socket.on("message", async function message(data) {
                 const msg = JSON.parse(data);
