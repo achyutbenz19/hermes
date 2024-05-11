@@ -13,7 +13,7 @@ class VectorStore {
   async initVectorStore() {
     this.vectorStore = await PineconeStore.fromExistingIndex(
       new OpenAIEmbeddings(),
-      { pineconeIndex: this.pineconeIndex }
+      { pineconeIndex: this.pineconeIndex },
     );
   }
 

@@ -15,7 +15,7 @@ ExpressWs(app);
 const PORT = process.env.PORT || 10000;
 
 app.get("/", (req, res) => {
-  res.json({ "message": "hermes, live!" });
+  res.json({ message: "hermes, live!" });
 });
 
 app.post("/answer", (req, res) => {
@@ -40,7 +40,7 @@ app.ws("/connection", (ws) => {
   const socket = new Socket(ws);
   const stt = new SpeechToText();
   const tts = new TextToSpeech({});
-  const vectorstore = new VectorStore()
+  const vectorstore = new VectorStore();
 
   let marks = [];
   let interactionCount = 0;
