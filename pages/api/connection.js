@@ -1,4 +1,3 @@
-import { Server } from "socket.io";
 import { LanguageModelProcessor } from '@/components/model'
 import { Socket } from '@/components/socket'
 import { SpeechToText } from "@/components/stt";
@@ -10,7 +9,7 @@ const SocketHandler = (req, res) => {
         console.log('Socket is already running');
     } else {
         console.log('Socket is initializing');
-        const io = new Server(res.socket.server);
+        const io = new Socket(res.socket.server);
 
         io.on("connection", (socket) => {
             console.log("Client connected");

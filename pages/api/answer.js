@@ -2,7 +2,7 @@ export default function ANSWER(req, res) {
   try {
     const responseXML = `
             <Response>
-                <Say>Himalayan restaurant at Niles, how can I help you?</Say>
+                <Say>Hi.</Say>
                 <Connect>
                     <Stream url="wss://hermes-lol.vercel.app/api/connection" />
                 </Connect>
