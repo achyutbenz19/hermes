@@ -13,8 +13,8 @@ RUN npm install
 # Copy the rest of your application's code
 COPY . .
 
-# Your app binds to port 3000 so you use the EXPOSE instruction to have it mapped by the docker daemon
-EXPOSE 3000
+# Your app binds to port 10000 so you use the EXPOSE instruction to have it mapped by the docker daemon
+EXPOSE 10000
 
 # Define the command to run your app using CMD which defines your runtime
 CMD ["node", "main.js"]
