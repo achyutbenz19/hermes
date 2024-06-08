@@ -9,11 +9,20 @@ const {
   ChatMessageHistory,
 } = require("@langchain/community/stores/message/in_memory");
 
+function formatDocs(docs) {
+  let formattedDocs = [];
+  for (let doc of docs) {
+    let docString = `Content: ${doc.page_content}, Metadata: ${doc.metadata}`;
+    formattedDocs.push(docString);
+  }
+  return formattedDocs.join("\n");
+}
+
 class LanguageModelProcessor {
   constructor() {
     this.llm = new ChatGroq({
       apiKey: process.env.GROQ_API_KEY,
-      temperature: 0.5,
+      temperature: 0.2,
       model: "mixtral-8x7b-32768",
     });
     this.store = {};
@@ -24,7 +33,12 @@ class LanguageModelProcessor {
     this.prompt = ChatPromptTemplate.fromMessages([
       [
         "ai",
-        "You are Hermes, a custer support conversational assistant for Himalayan resturant based in Niles, Chicago (8265 W Golf Rd, Niles, IL 60714). Use short, polite, natural and conversational responses as if you're having a live conversation. Your response should be under 20 words. Do not respond with any code, only conversation.",
+        `You are Hermes, a custer support conversational assistant for Himalayan resturant based in Niles, Chicago (8265 W Golf Rd, Niles, IL 60714). Use short, polite, natural and conversational responses as if you're having a live conversation. Your response should be under 20 words. Do not respond with any code, only conversation. / 
+
+        Here is the context: 
+        ${formatDocs(documents)}
+
+        Answer the question based on the context ONLY IF THE QUERY IS RELEVANT TO THE CONTEXT. Do not start with "Based on the context, I think...".`,
       ],
       new MessagesPlaceholder("history"),
       ["human", "{input}"],
@@ -32,7 +46,6 @@ class LanguageModelProcessor {
 
     const runnable = this.prompt.pipe(this.llm);
     const contextRunnable = new RunnableWithMessageHistory({
-      context: documents,
       runnable,
       getMessageHistory: (_sessionId) => this.messageHistory,
       inputMessagesKey: "input",

@@ -106,15 +106,3 @@ app.ws("/connection", (ws) => {
 
 app.listen(PORT);
 console.log(`Server running on port ${PORT}`);
-
-// async function main() {
-//   const j = new VectorStore();
-//   const l = new LanguageModelProcessor()
-//   await j.initVectorStore();
-//   const query = "What is chicken 65?"
-//   const docs = (await j.queryVectorStore(query));
-//   console.log(docs)
-//   console.log(await l.chat(query, docs))
-// }
-
-// main()
